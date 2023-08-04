@@ -1,4 +1,4 @@
-
+//https://api.openweathermap.org/data/2.5/weather?
 function updateTemp(){
     document.getElementById("Search_btn").addEventListener("click", function(){
         const cityName = document.getElementById("city_name").value;
@@ -7,7 +7,7 @@ function updateTemp(){
               
         }
         else{
-            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=c30a573abbe31f9cc5dbf0894290f0c8&units=metric`)
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=c30a573abbe31f9cc5dbf0894290f0c8`)
         .then(res => res.json())
         .then(data => {
             console.log(data);
@@ -15,7 +15,7 @@ function updateTemp(){
            document.getElementById("update_city").innerText = cityName;
 
            //update city Temperature
-           const temp = Math.ceil(data.main.temp);
+           const temp = Math.ceil(data.main.temp - 273.15);
            document.getElementById("update_temp").innerText = `${temp}`;
            
            //update weather Condition
