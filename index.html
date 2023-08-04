@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Temperature App</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url(images/bg-image.jpg) no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+        }
+        form{
+            padding-top: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-status text-white text-center pt-5">
+            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="" id="image">
+            <h1 id="update_city">Dhaka</h1>
+            <h3><span id="update_temp">38.06</span>&deg;C</h3>
+            <h1 class="lead" id="weather">Clouds</h1>
+        </div>
+        <form class="col-md-6 m-auto">
+            <div class="input-group mb-3">
+                <input type="text" id="city_name" class="form-control" placeholder="Enter a location for Weather ...">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-danger" id="Search_btn">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
